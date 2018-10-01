@@ -1,0 +1,118 @@
+body{
+    height: 100vh;
+	display: flex;
+    justify-content: center;
+    align-items:center;
+	font-family: sans-serif;
+	background-color: #dbdbdb;
+
+	div{
+		background: url(../img/kitten.jpg);
+		background-size: 115%;
+		width: 350px;
+		height: 450px;
+		position: relative;
+		overflow: hidden;
+		transition: all 1s ease;
+		/*opacity: 1; */
+		z-index: 1;
+
+		div.card_opacity{
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			transition: all 1s ease;
+		}
+
+		&:hover{
+			background-size: 125%;
+			transition: all 1s ease;
+			div.card_opacity{
+				background-color: #dbdbdb;
+				transition: all 1s ease;
+			}
+			section{
+				height: 200px;
+				transition: all 1s ease;
+				p{
+					transform: translateY(0%);
+					position: static;//sert à garder le texte à sa position initiale
+					transition: all 1s ease;
+				}
+			}
+		}
+
+		span.date{
+			position: absolute;
+			background-color: darkcyan;
+			color: #fff;
+			border-radius: 50%;
+            padding: 15px;
+            width:35px;
+			top: 15px;
+			right: 15px;
+			text-align: center;
+            z-index: 10;
+            font-weight:bold;
+		}
+
+		section{
+            position: absolute;
+			background-color: #fff;
+			padding: 30px;
+			bottom: 0;
+			width: 100%;
+			height: 123px;
+            transition: all 1s ease;
+            z-index: 10;
+
+			span.photos{
+				position: absolute;
+				background-color: darkcyan;
+				padding: 15px;
+				text-transform: uppercase;
+				color: #fff;
+				font-size: 15px;
+				top: -30px;
+				left: 0;
+                z-index: 10;
+                font-weight:bold;
+			}
+
+			h2{
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+
+			h1{
+				color: darkcyan;
+				font-size: 20px;
+				margin-bottom: 30px;
+			}
+
+			p{
+				line-height: 120%;
+				margin-bottom: 30px;
+				width: 290px;
+				transform: translateY(50%);
+				position: absolute;
+				transition: all 1s ease;
+			}
+			span.little_sentences{
+				position: relative;
+				color: #747474;
+				font-size: 14px;
+				margin-right: 10px;
+
+				i{
+					color: #747474;
+					margin-right: 7px;
+				}
+			}
+		}
+	}
+}
